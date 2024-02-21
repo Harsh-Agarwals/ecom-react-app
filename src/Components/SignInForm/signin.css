@@ -1,0 +1,38 @@
+.signin-page {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 4rem;
+}
+
+.sign-in-container {
+    display: flex;
+    flex-direction: column;
+    width: 380px;
+}
+
+.sign-in-container h2 {
+    margin: 10px 0 0;
+}
+
+.group input[type="password"],
+.group input[type="email"] {
+    margin: 0;
+}
+
+.group:nth-of-type(2) {
+    margin: 0 0 45px;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+
+@media screen and (max-width: 850px) {
+    .signin-page {
+        flex-direction: column;
+        align-items: center;
+    }
+}

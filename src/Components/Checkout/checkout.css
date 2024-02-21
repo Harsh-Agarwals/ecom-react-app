@@ -1,0 +1,31 @@
+.checkout-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* margin: 1rem; */
+    padding: 2rem;
+    border-top: 1px solid grey;
+}
+
+.checkout-item .incDec {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.item-head div {
+    margin-left: 2rem;
+}
+
+.checkout-container img {
+    width: 8rem;
+}
+
+.total {
+    border-top: 2px solid grey;
+    padding-top: 2rem;
+    font-weight: 500;
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+}

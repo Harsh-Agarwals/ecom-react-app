@@ -1,25 +1,35 @@
-import logo from './logo.svg';
-import './App.css';
+import { Route, Routes } from "react-router-dom";
+import Home from "./Routes/Home/Home";
+import Navigation from "./Routes/Navigation/Navigation";
+// import Signin from "./Routes/SignUp/Signin";
+// import SignUp from "./Routes/SignUp/SignUp";
+import Authentication from "./Routes/Authentication/Authentication";
+import Shop from "./Routes/Shop/Shop";
+import Checkout from "./Components/Checkout/Checkout";
+
+// const Shop = () => {
+//     return (
+//         <div>
+//             <h1>This is the Shop page.</h1>
+//         </div>
+//     );
+// };
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <Routes>
+            <Route path="/" element={<Navigation />}>
+                {/* <Route path="home" element={<Home />} /> */}
+                <Route index element={<Home />} />
+                <Route path="shop" element={<Shop />} />
+                <Route path="auth" element={<Authentication />} />
+                <Route path="checkout" element={<Checkout />} />
+                {/* <Route path="sign-up" element={<Signin />}>
+                    <Route index element={<SignUp />} />
+                </Route> */}
+            </Route>
+        </Routes>
+    );
 }
 
 export default App;
